@@ -9,6 +9,10 @@ const AreaChart = () => {
     xaxis: {
       categories: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     },
+    colors: ["#7A47F8", "#47D9E3", "#F847F1"],
+    dataLabels: {
+      enabled: false,
+    },
   };
   const series = [
     {
@@ -19,6 +23,10 @@ const AreaChart = () => {
       name: "series-2",
       data: [23, 12, 54, 61, 32, 56, 81, 19],
     },
+    {
+      name: "series-3",
+      data: [10, 2, 54, 40, 22, 30, 50, 7],
+    },
   ];
   return (
     <div className="area">
@@ -27,7 +35,8 @@ const AreaChart = () => {
           options={options}
           series={series}
           type="area"
-          width="500"
+          width="700"
+          height="200"
         />
       )}
     </div>
