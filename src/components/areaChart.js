@@ -1,15 +1,34 @@
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+import { useSelector } from "react-redux";
 const DynamicApexChart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
 });
 
 const AreaChart = () => {
+  const mood = useSelector((state) => state.mood.mood);
   const options = {
     xaxis: {
       categories: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+      labels: {
+        style: {
+          colors: mood === "dark" ? "white" : "black" // Change the font color of the x-axis labels here
+        }
+      }
     },
-    colors: ["#7A47F8", "#47D9E3", "#F847F1"],
+    yaxis: {
+      labels: {
+        style: {
+          colors: mood === "dark" ? "white" : "black" // Change the font color of the x-axis labels here
+        }
+      }
+    },
+    legend: {
+      labels: {
+        colors: mood === "dark" ? "white" : "black" // Change the font color of all legend labels here
+      }
+    },
+    colors: ["#A68BEF", "#47D9E3", "#F847F1"],
     dataLabels: {
       enabled: false,
     },
@@ -29,7 +48,7 @@ const AreaChart = () => {
     },
   ];
   return (
-    <div className="area">
+    <div className="area" style={{ backgroundColor: mood === "light" ? "white" : "#40375C"}}>
       {typeof window !== "undefined" && (
         <DynamicApexChart
           options={options}

@@ -3,7 +3,10 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import AreaChart from "@/components/areaChart";
-
+import ColumnChart from "@/components/columnChart";
+import PieChart from "@/components/pieChart";
+import MultipleRadialbarChart from "@/components/multipleRadialbarChart";
+import RadialbarChart from "@/components/radialbarChart";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -17,6 +20,10 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <AreaChart />
+        <ColumnChart />
+        <PieChart />
+        <MultipleRadialbarChart />
+        <RadialbarChart />
       </main>
     </>
   );

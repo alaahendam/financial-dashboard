@@ -66,7 +66,7 @@ const useStyles = createStyles((theme) => ({
     alignItems: "center",
     textDecoration: "none",
     fontSize: theme.fontSizes.sm,
-    color: theme.white,
+    //color: theme.white,
     padding: `${theme.spacing.xs} ${theme.spacing.sm}`,
     borderRadius: theme.radius.sm,
     fontWeight: 500,
@@ -78,7 +78,7 @@ const useStyles = createStyles((theme) => ({
 
   linkIcon: {
     ref: getStylesRef("icon"),
-    color: theme.white,
+    //color: theme.white,
     opacity: 0.75,
     marginRight: theme.spacing.sm,
   },
@@ -131,16 +131,16 @@ export function NavbarSimpleColored() {
 
   return (
     <Navbar
-      height={700}
+      height='100vh'
       width={{ sm: 300 }}
       p="md"
       className={classes.navbar}
-      style={{ backgroundColor: mood === "light" ? "white" : "#40375C" }}
+      style={{ backgroundColor: mood === "light" ? "white" : "#352D49" ,color: mood === "light" ? "black" : "white" ,borderRight:'none'}}
     >
       <Navbar.Section grow>
         <Group className={classes.header} position="apart">
           {/* <MantineLogo size={28} inverted /> */}
-          <Code className={classes.version}>v3.1.2</Code>
+          {/* <Code className={classes.version}></Code> */}
         </Group>
         {links}
       </Navbar.Section>
