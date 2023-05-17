@@ -24,6 +24,8 @@ export default function Home() {
           display: "flex",
           flexWrap: "wrap",
           flex: "72%",
+          justifyContent: "space-evenly",
+          alignItems: "center",
         }}
       >
         <AreaChart />

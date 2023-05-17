@@ -38,7 +38,7 @@ const pieChart = () => {
           options={options}
           series={series}
           type="donut"
-          width="450"
+          width="400"
           height="200"
         />
       )}

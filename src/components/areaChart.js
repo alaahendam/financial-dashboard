@@ -57,7 +57,7 @@ const AreaChart = () => {
           options={options}
           series={series}
           type="area"
-          width="450"
+          width="400"
           height="200"
         />
       )}

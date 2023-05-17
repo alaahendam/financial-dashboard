@@ -99,7 +99,7 @@ const columnChart = () => {
           options={options}
           series={series}
           type="bar"
-          width="450"
+          width="400"
           height="200"
         />
       )}

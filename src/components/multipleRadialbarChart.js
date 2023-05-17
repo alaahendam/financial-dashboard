@@ -65,7 +65,7 @@ const multipleRadialbarChart = () => {
           options={options}
           series={series}
           type="radialBar"
-          width="450"
+          width="400"
           height="200"
         />
       )}
