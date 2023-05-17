@@ -12,21 +12,21 @@ const AreaChart = () => {
       categories: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
       labels: {
         style: {
-          colors: mood === "dark" ? "white" : "black" // Change the font color of the x-axis labels here
-        }
-      }
+          colors: mood === "dark" ? "white" : "black", // Change the font color of the x-axis labels here
+        },
+      },
     },
     yaxis: {
       labels: {
         style: {
-          colors: mood === "dark" ? "white" : "black" // Change the font color of the x-axis labels here
-        }
-      }
+          colors: mood === "dark" ? "white" : "black", // Change the font color of the x-axis labels here
+        },
+      },
     },
     legend: {
       labels: {
-        colors: mood === "dark" ? "white" : "black" // Change the font color of all legend labels here
-      }
+        colors: mood === "dark" ? "white" : "black", // Change the font color of all legend labels here
+      },
     },
     colors: ["#A68BEF", "#47D9E3", "#F847F1"],
     dataLabels: {
@@ -48,13 +48,16 @@ const AreaChart = () => {
     },
   ];
   return (
-    <div className="area" style={{ backgroundColor: mood === "light" ? "white" : "#40375C"}}>
+    <div
+      className="area"
+      style={{ backgroundColor: mood === "light" ? "white" : "#40375C" }}
+    >
       {typeof window !== "undefined" && (
         <DynamicApexChart
           options={options}
           series={series}
           type="area"
-          width="700"
+          width="450"
           height="200"
         />
       )}

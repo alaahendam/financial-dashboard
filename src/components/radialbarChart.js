@@ -7,39 +7,42 @@ const DynamicApexChart = dynamic(() => import("react-apexcharts"), {
 
 const radialbarChart = () => {
   const mood = useSelector((state) => state.mood.mood);
-  const options =  {
+  const options = {
     chart: {
       height: 350,
-      type: 'radialBar',
+      type: "radialBar",
     },
     plotOptions: {
-        radialBar: {
-          hollow: {
-            size: '70%'
+      radialBar: {
+        hollow: {
+          size: "70%",
+        },
+        dataLabels: {
+          name: {
+            color: mood === "dark" ? "white" : "black", // Change the font color of the label inside the hollow center here
           },
-          dataLabels: {
-            name: {
-              color: mood === "dark" ? "white" : "black", // Change the font color of the label inside the hollow center here
-            },
-            value: {
-              color: mood === "dark" ? "white" : "black",
-              show: true
-            }
-          }
-        }
+          value: {
+            color: mood === "dark" ? "white" : "black",
+            show: true,
+          },
+        },
       },
-    labels: ['Cricket'],
+    },
+    labels: ["Cricket"],
     colors: ["#A68BEF"],
-  }
-  const series=[75]
+  };
+  const series = [75];
   return (
-    <div className="area" style={{ backgroundColor: mood === "light" ? "white" : "#40375C"}}>
+    <div
+      className="area"
+      style={{ backgroundColor: mood === "light" ? "white" : "#40375C" }}
+    >
       {typeof window !== "undefined" && (
         <DynamicApexChart
           options={options}
           series={series}
           type="radialBar"
-          width="700"
+          width="450"
           height="200"
         />
       )}

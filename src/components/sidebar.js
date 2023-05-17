@@ -131,11 +131,15 @@ export function NavbarSimpleColored() {
 
   return (
     <Navbar
-      height='100vh'
-      width={{ sm: 300 }}
+      height="100vh"
+      width={{ sm: 250 }}
       p="md"
       className={classes.navbar}
-      style={{ backgroundColor: mood === "light" ? "white" : "#352D49" ,color: mood === "light" ? "black" : "white" ,borderRight:'none'}}
+      style={{
+        backgroundColor: mood === "light" ? "white" : "#352D49",
+        color: mood === "light" ? "black" : "white",
+        borderRight: "none",
+      }}
     >
       <Navbar.Section grow>
         <Group className={classes.header} position="apart">

@@ -8,32 +8,37 @@ const DynamicApexChart = dynamic(() => import("react-apexcharts"), {
 const pieChart = () => {
   const mood = useSelector((state) => state.mood.mood);
   const options = {
-    responsive: [{
-      breakpoint: 480,
-      options: {
-        chart: {
-          width: 200
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom",
+          },
         },
-        legend: {
-          position: 'bottom'
-        }
-      }
-    }],
+      },
+    ],
     legend: {
       labels: {
-        colors: mood === "dark" ? "white" : "black" // Change the font color of all legend labels here
-      }
+        colors: mood === "dark" ? "white" : "black", // Change the font color of all legend labels here
+      },
     },
   };
-  const series = [44, 55, 41, 17, 15]
+  const series = [44, 55, 41, 17, 15];
   return (
-    <div className="area" style={{ backgroundColor: mood === "light" ? "white" : "#40375C"}}>
+    <div
+      className="area"
+      style={{ backgroundColor: mood === "light" ? "white" : "#40375C" }}
+    >
       {typeof window !== "undefined" && (
         <DynamicApexChart
           options={options}
           series={series}
           type="donut"
-          width="700"
+          width="450"
           height="200"
         />
       )}

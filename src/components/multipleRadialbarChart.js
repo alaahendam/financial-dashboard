@@ -18,31 +18,30 @@ const multipleRadialbarChart = () => {
         hollow: {
           margin: 5,
           size: "48%",
-          background: "transparent"
+          background: "transparent",
         },
         track: {
           show: true,
           background: "#40475D",
           strokeWidth: "10%",
           opacity: 1,
-          margin: 3 // margin is in pixels
-        }
-      }
+          margin: 3, // margin is in pixels
+        },
+      },
     },
     series: [71, 63],
     labels: ["Device 1", "Device 2"],
     legend: {
       show: true,
       labels: {
-        colors: mood === "dark" ? "white" : "black" // Change the font color of all legend labels here
+        colors: mood === "dark" ? "white" : "black", // Change the font color of all legend labels here
       },
-      
+
       formatter: function (val, opts) {
         return val + " - " + opts.w.globals.series[opts.seriesIndex] + "%";
-      }
+      },
     },
     fill: {
-      
       gradient: {
         shade: "dark",
         type: "horizontal",
@@ -50,20 +49,23 @@ const multipleRadialbarChart = () => {
         inverseColors: true,
         opacityFrom: 1,
         opacityTo: 1,
-        stops: [0, 100]
-      }
+        stops: [0, 100],
+      },
     },
     colors: ["#A68BEF", "#47D9E3", "#F847F1"],
   };
-  const series=[71, 63,88]
+  const series = [71, 63, 88];
   return (
-    <div className="area" style={{ backgroundColor: mood === "light" ? "white" : "#40375C"}}>
+    <div
+      className="area"
+      style={{ backgroundColor: mood === "light" ? "white" : "#40375C" }}
+    >
       {typeof window !== "undefined" && (
         <DynamicApexChart
           options={options}
           series={series}
           type="radialBar"
-          width="700"
+          width="450"
           height="200"
         />
       )}
