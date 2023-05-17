@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 // Define the initial mood value
 
 const initialState = {
-  mood: "light",
+  mood: "dark",
 };
 
 export const darkMoodSlice = createSlice({
