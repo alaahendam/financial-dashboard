@@ -9,7 +9,9 @@ const rightBoard = () => {
         backgroundColor: mood === "light" ? "white" : "#352D49",
         color: mood === "light" ? "black" : "white",
         width: "28%",
-        height: "100vh",
+        height: "100%",
+        borderRadius: "7px",
+        marginRight: "15px",
       }}
     ></div>
   );

@@ -31,15 +31,21 @@ const pieChart = () => {
   return (
     <div
       className="area"
-      style={{ backgroundColor: mood === "light" ? "white" : "#40375C" }}
+      style={{
+        backgroundColor: mood === "light" ? "white" : "#40375C",
+        borderRadius: "7px",
+        width: "33%",
+        height: "93%",
+        display: "flex",
+        alignItems: "center",
+      }}
     >
       {typeof window !== "undefined" && (
         <DynamicApexChart
           options={options}
           series={series}
           type="donut"
-          width="400"
-          height="200"
+          height="300"
         />
       )}
     </div>

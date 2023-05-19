@@ -50,14 +50,19 @@ const AreaChart = () => {
   return (
     <div
       className="area"
-      style={{ backgroundColor: mood === "light" ? "white" : "#40375C" }}
+      style={{
+        backgroundColor: mood === "light" ? "white" : "#40375C",
+        width: "65%",
+        borderRadius: "7px",
+        height: "93%",
+      }}
     >
       {typeof window !== "undefined" && (
         <DynamicApexChart
           options={options}
           series={series}
           type="area"
-          width="400"
+          width="100%"
           height="200"
         />
       )}

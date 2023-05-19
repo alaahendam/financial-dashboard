@@ -92,15 +92,19 @@ const columnChart = () => {
   return (
     <div
       className="area"
-      style={{ backgroundColor: mood === "light" ? "white" : "#40375C" }}
+      style={{
+        backgroundColor: mood === "light" ? "white" : "#40375C",
+        borderRadius: "7px",
+        width: "100%",
+        height: "100%",
+      }}
     >
       {typeof window !== "undefined" && (
         <DynamicApexChart
           options={options}
           series={series}
           type="bar"
-          width="400"
-          height="200"
+          height="270"
         />
       )}
     </div>

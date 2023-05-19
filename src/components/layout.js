@@ -8,7 +8,6 @@ export default function Layout({ children }) {
         style={{
           backgroundColor: mood === "light" ? "#EFF0F6" : "rgb(38 32 54)",
           width: "100%",
-          display: "flex",
         }}
       >
         {children}
