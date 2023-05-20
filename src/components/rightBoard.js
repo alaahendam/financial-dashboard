@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-
+import CalendarComponent from "./calendar";
 const rightBoard = () => {
   const mood = useSelector((state) => state.mood.mood);
   return (
@@ -13,7 +13,9 @@ const rightBoard = () => {
         borderRadius: "7px",
         marginRight: "15px",
       }}
-    ></div>
+    >
+      <CalendarComponent />
+    </div>
   );
 };
 export default rightBoard;

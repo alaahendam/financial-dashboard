@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import { useSelector } from "react-redux";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import AreaChart from "@/components/areaChart";
@@ -7,11 +8,14 @@ import ColumnChart from "@/components/columnChart";
 import PieChart from "@/components/pieChart";
 import MultipleRadialbarChart from "@/components/multipleRadialbarChart";
 import RadialbarChart from "@/components/radialbarChart";
+import SingleAreaChart from "@/components/singleAreaChart";
 import RightBoard from "@/components/rightBoard";
 import NavBar from "@/components/navbar";
+import CalendarComponent from "@/components/calendar";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const mood = useSelector((state) => state.mood.mood);
   return (
     <>
       <Head>
@@ -61,10 +65,50 @@ export default function Home() {
               style={{
                 width: "100%",
                 height: "100%",
-                backgroundColor: "#352D49",
-                borderRadius: "7px",
+                display: "flex",
+                justifyContent: "space-between",
               }}
-            ></div>
+            >
+              <div
+                style={{
+                  backgroundColor: mood === "light" ? "white" : "#40375C",
+                  borderRadius: "7px",
+                  width: "30%",
+                  height: "93%",
+                  display: "flex",
+                  alignItems: "center",
+                  borderRadius: "7px",
+                }}
+              >
+                <SingleAreaChart />
+              </div>
+              <div
+                style={{
+                  backgroundColor: mood === "light" ? "white" : "#40375C",
+                  borderRadius: "7px",
+                  width: "30%",
+                  height: "93%",
+                  display: "flex",
+                  alignItems: "center",
+                  borderRadius: "7px",
+                }}
+              >
+                <SingleAreaChart />
+              </div>
+              <div
+                style={{
+                  backgroundColor: mood === "light" ? "white" : "#40375C",
+                  borderRadius: "7px",
+                  width: "30%",
+                  height: "93%",
+                  display: "flex",
+                  alignItems: "center",
+                  borderRadius: "7px",
+                }}
+              >
+                <SingleAreaChart />
+              </div>
+            </div>
           </div>
           <div
             style={{
@@ -108,7 +152,9 @@ export default function Home() {
                   backgroundColor: "#352D49",
                   borderRadius: "7px",
                 }}
-              ></div>
+              >
+                <CalendarComponent />
+              </div>
             </div>
           </div>
           {/* 
