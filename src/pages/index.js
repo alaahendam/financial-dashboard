@@ -93,8 +93,14 @@ export default function Home() {
                   height: "48%",
                   backgroundColor: "#352D49",
                   borderRadius: "7px",
+                  display: "flex",
+                  justifyContent: "space-evenly",
                 }}
-              ></div>
+              >
+                <RadialbarChart />
+                <RadialbarChart />
+                <RadialbarChart />
+              </div>
               <div
                 style={{
                   width: "100%",

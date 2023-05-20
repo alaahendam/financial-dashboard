@@ -35,15 +35,16 @@ const radialbarChart = () => {
   return (
     <div
       className="area"
-      style={{ backgroundColor: mood === "light" ? "white" : "#40375C" }}
+      style={{
+        width: "30%",
+      }}
     >
       {typeof window !== "undefined" && (
         <DynamicApexChart
           options={options}
           series={series}
           type="radialBar"
-          width="400"
-          height="200"
+          height="160"
         />
       )}
     </div>
