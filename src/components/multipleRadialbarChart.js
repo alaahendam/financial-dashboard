@@ -58,14 +58,18 @@ const multipleRadialbarChart = () => {
   return (
     <div
       className="area"
-      style={{ backgroundColor: mood === "light" ? "white" : "#40375C" }}
+      style={{
+        //backgroundColor: mood === "light" ? "white" : "#40375C",
+        backgroundColor: mood === "light" ? "white" : "#352D49",
+        width: "100%",
+      }}
     >
       {typeof window !== "undefined" && (
         <DynamicApexChart
           options={options}
           series={series}
           type="radialBar"
-          width="400"
+          width="325"
           height="200"
         />
       )}

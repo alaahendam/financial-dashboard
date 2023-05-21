@@ -93,7 +93,8 @@ const columnChart = () => {
     <div
       className="area"
       style={{
-        backgroundColor: mood === "light" ? "white" : "#40375C",
+        //backgroundColor: mood === "light" ? "white" : "#40375C",
+        backgroundColor: mood === "light" ? "white" : "#352D49",
         borderRadius: "7px",
         width: "100%",
         height: "100%",

@@ -32,7 +32,8 @@ const pieChart = () => {
     <div
       className="area"
       style={{
-        backgroundColor: mood === "light" ? "white" : "#40375C",
+        //backgroundColor: mood === "light" ? "white" : "#40375C",
+        backgroundColor: mood === "light" ? "white" : "#352D49",
         borderRadius: "7px",
         width: "33%",
         height: "93%",

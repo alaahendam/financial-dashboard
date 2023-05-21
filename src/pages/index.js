@@ -71,11 +71,12 @@ export default function Home() {
             >
               <div
                 style={{
-                  backgroundColor: mood === "light" ? "white" : "#40375C",
+                  backgroundColor: mood === "light" ? "white" : "#352D49",
                   borderRadius: "7px",
-                  width: "30%",
-                  height: "93%",
+                  width: "32%",
+                  height: "99%",
                   display: "flex",
+                  justifyContent: "end",
                   alignItems: "center",
                   borderRadius: "7px",
                 }}
@@ -84,11 +85,12 @@ export default function Home() {
               </div>
               <div
                 style={{
-                  backgroundColor: mood === "light" ? "white" : "#40375C",
+                  backgroundColor: mood === "light" ? "white" : "#352D49",
                   borderRadius: "7px",
-                  width: "30%",
-                  height: "93%",
+                  width: "32%",
+                  height: "99%",
                   display: "flex",
+                  justifyContent: "end",
                   alignItems: "center",
                   borderRadius: "7px",
                 }}
@@ -97,11 +99,12 @@ export default function Home() {
               </div>
               <div
                 style={{
-                  backgroundColor: mood === "light" ? "white" : "#40375C",
+                  backgroundColor: mood === "light" ? "white" : "#352D49",
                   borderRadius: "7px",
-                  width: "30%",
-                  height: "93%",
+                  width: "33%",
+                  height: "99%",
                   display: "flex",
+                  justifyContent: "end",
                   alignItems: "center",
                   borderRadius: "7px",
                 }}
@@ -141,9 +144,10 @@ export default function Home() {
                   justifyContent: "space-evenly",
                 }}
               >
+                {/* <RadialbarChart />
                 <RadialbarChart />
-                <RadialbarChart />
-                <RadialbarChart />
+                <RadialbarChart /> */}
+                <MultipleRadialbarChart />
               </div>
               <div
                 style={{
@@ -153,7 +157,7 @@ export default function Home() {
                   borderRadius: "7px",
                 }}
               >
-                <CalendarComponent />
+                {/* <CalendarComponent /> */}
               </div>
             </div>
           </div>

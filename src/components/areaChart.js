@@ -51,7 +51,8 @@ const AreaChart = () => {
     <div
       className="area"
       style={{
-        backgroundColor: mood === "light" ? "white" : "#40375C",
+        // backgroundColor: mood === "light" ? "white" : "#40375C",
+        backgroundColor: mood === "light" ? "white" : "#352D49",
         width: "65%",
         borderRadius: "7px",
         height: "93%",
