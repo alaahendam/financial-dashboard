@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { useSelector } from "react-redux";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+
 const DynamicApexChart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
 });
 
-const columnChart = () => {
+const ColumnChart = () => {
   const mood = useSelector((state) => state.mood.mood);
+  const chartData = useSelector((state) => state.chartsData.columnChartData);
+
   const options = {
     chart: {
       type: "bar",
@@ -75,25 +79,11 @@ const columnChart = () => {
       },
     },
   };
-  const series = [
-    {
-      name: "Net Profit",
-      data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
-    },
-    {
-      name: "Revenue",
-      data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
-    },
-    {
-      name: "Free Cash Flow",
-      data: [35, 41, 36, 26, 45, 48, 52, 53, 41],
-    },
-  ];
+
   return (
     <div
       className="area"
       style={{
-        //backgroundColor: mood === "light" ? "white" : "#40375C",
         backgroundColor: mood === "light" ? "white" : "#352D49",
         borderRadius: "7px",
         width: "100%",
@@ -103,7 +93,7 @@ const columnChart = () => {
       {typeof window !== "undefined" && (
         <DynamicApexChart
           options={options}
-          series={series}
+          series={chartData}
           type="bar"
           height="270"
         />
@@ -111,4 +101,5 @@ const columnChart = () => {
     </div>
   );
 };
-export default columnChart;
+
+export default ColumnChart;

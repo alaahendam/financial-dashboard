@@ -7,6 +7,9 @@ const DynamicApexChart = dynamic(() => import("react-apexcharts"), {
 
 const multipleRadialbarChart = () => {
   const mood = useSelector((state) => state.mood.mood);
+  const chartData = useSelector(
+    (state) => state.chartsData.multipleRadialbarChartData
+  );
   const options = {
     chart: {
       type: "radialBar",
@@ -54,7 +57,6 @@ const multipleRadialbarChart = () => {
     },
     colors: ["#A68BEF", "#47D9E3", "#F847F1"],
   };
-  const series = [71, 63, 88];
   return (
     <div
       className="area"
@@ -67,7 +69,7 @@ const multipleRadialbarChart = () => {
       {typeof window !== "undefined" && (
         <DynamicApexChart
           options={options}
-          series={series}
+          series={chartData}
           type="radialBar"
           width="325"
           height="200"

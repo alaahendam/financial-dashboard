@@ -6,26 +6,13 @@ const DynamicApexChart = dynamic(() => import("react-apexcharts"), {
 });
 
 const SingleAreaChart = () => {
-  const seriesData = {
-    monthDataSeries1: {
-      prices: [30, 40, 35, 50, 49, 60, 70, 91, 125],
-      dates: [
-        "2023-05-01",
-        "2023-05-02",
-        "2023-05-03",
-        "2023-05-04",
-        "2023-05-05",
-        "2023-05-06",
-        "2023-05-07",
-        "2023-05-08",
-        "2023-05-09",
-      ],
-    },
-  };
+  const chartData = useSelector(
+    (state) => state.chartsData.singleAreaChartData
+  );
   const series = [
     {
       name: "STOCK ABC",
-      data: seriesData.monthDataSeries1.prices,
+      data: chartData,
     },
   ];
   const options = {
