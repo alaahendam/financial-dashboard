@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { useSelector } from "react-redux";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 const DynamicApexChart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
@@ -18,7 +17,7 @@ const ColumnChart = () => {
       animations: {
         //dynamicAnimation: true,
         easing: "easeInOutQuad",
-        speed: 1000, // Disable chart animations
+        // Disable chart animations
       },
     },
     colors: ["#A68BEF", "#47D9E3", "#F847F1"],

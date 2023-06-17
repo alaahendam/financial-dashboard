@@ -32,7 +32,6 @@ const SingleAreaChart = () => {
       height: 350,
       animations: {
         easing: "easeInOutQuad",
-        speed: 2000,
       },
       zoom: {
         enabled: false,

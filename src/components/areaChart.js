@@ -14,7 +14,6 @@ const AreaChart = () => {
     chart: {
       animations: {
         easing: "easeInOutQuad",
-        speed: 2000,
       },
     },
     xaxis: {
