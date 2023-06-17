@@ -9,6 +9,17 @@ const SingleAreaChart = () => {
   const chartData = useSelector(
     (state) => state.chartsData.singleAreaChartData
   );
+  const dates = [
+    "2023-05-01",
+    "2023-05-02",
+    "2023-05-03",
+    "2023-05-04",
+    "2023-05-05",
+    "2023-05-06",
+    "2023-05-07",
+    "2023-05-08",
+    "2023-05-09",
+  ];
   const series = [
     {
       name: "STOCK ABC",
@@ -19,6 +30,10 @@ const SingleAreaChart = () => {
     chart: {
       type: "area",
       height: 350,
+      animations: {
+        easing: "easeInOutQuad",
+        speed: 2000,
+      },
       zoom: {
         enabled: false,
       },
@@ -35,7 +50,7 @@ const SingleAreaChart = () => {
     grid: {
       show: false, // Hide background lines
     },
-    labels: seriesData.monthDataSeries1.dates,
+    labels: dates,
     xaxis: {
       type: "datetime",
       labels: {

@@ -15,6 +15,11 @@ const ColumnChart = () => {
     chart: {
       type: "bar",
       height: 350,
+      animations: {
+        //dynamicAnimation: true,
+        easing: "easeInOutQuad",
+        speed: 1000, // Disable chart animations
+      },
     },
     colors: ["#A68BEF", "#47D9E3", "#F847F1"],
     dataLabels: {

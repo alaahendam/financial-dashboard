@@ -11,6 +11,12 @@ const AreaChart = () => {
   const chartData = useSelector((state) => state.chartsData.areaChartData);
 
   const options = {
+    chart: {
+      animations: {
+        easing: "easeInOutQuad",
+        speed: 2000,
+      },
+    },
     xaxis: {
       categories: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
       labels: {
