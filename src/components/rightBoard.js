@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import CalendarComponent from "./calendar";
-const rightBoard = () => {
+const RightBoard = () => {
   const mood = useSelector((state) => state.mood.mood);
   return (
     <div
@@ -36,4 +36,4 @@ const rightBoard = () => {
     </div>
   );
 };
-export default rightBoard;
+export default RightBoard;

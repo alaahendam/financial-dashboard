@@ -5,7 +5,7 @@ const DynamicApexChart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
 });
 
-const multipleRadialbarChart = () => {
+const MultipleRadialbarChart = () => {
   const mood = useSelector((state) => state.mood.mood);
   const chartData = useSelector(
     (state) => state.chartsData.multipleRadialbarChartData
@@ -78,4 +78,4 @@ const multipleRadialbarChart = () => {
     </div>
   );
 };
-export default multipleRadialbarChart;
+export default MultipleRadialbarChart;
